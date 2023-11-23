@@ -17,6 +17,7 @@
 \RequirePackage{pgffor}
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
+\RequirePackage{enumitem}
 
 
 \newbool{icon}
@@ -52,7 +53,7 @@
 \definecolor{blue}{HTML}{6CE0F1}
 \definecolor{mainblue}{HTML}{0E5484}
 \definecolor{cerulean}{HTML}{007BA7}
-\definecolor{maingray}{HTML}{B9B9B9}
+\definecolor{maingray}{HTML}{B9B9B9}% B9B9B9
 \definecolor{maindarkgray}{HTML}{B3B3B3}
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -169,7 +170,7 @@
 \newcommand{\makeprofile}
 {
 \begin{tikzpicture}[remember picture,overlay]
-   	 \node [rectangle, fill=asidecolor, anchor=north, minimum width=9.90cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+     \node [rectangle, fill=asidecolor, anchor=north, minimum width=9.90cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
 \end{tikzpicture}
 
 \begin{textblock}{6}(0.5, 0.2)
@@ -227,11 +228,11 @@
   {%
    \round{#1}{
       \ifcase\value{colorCounter}%
-        maingray\or%
         mainblue\or%
-        maingray\or%
+        mainblue\or%
+        mainblue\or%
         mainblue\else%
-        maingray\fi%
+        mainblue\fi%
     }%
   }%
   \stepcounter{colorCounter}%
@@ -283,10 +284,10 @@
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitem}[4]{%
   \hspace{3pt}\scriptsize{#1}&\parbox[t]{11.5cm}{%
-    \normalsize{#2}%
+    \small{#2}%
     \vspace{5px}%
     \hfill%
-    {\normalsize#3}\\%
+    {\small#3}\\%
     \small{#4}\vspace{\parsep}%
   }\\}
 
