@@ -187,9 +187,10 @@
 
 {\Huge\color{mainblue}\givencvname}
 
-\begin{flushright}
-{\Large\color{black!80}\givencvjobtitle}
-\end{flushright}
+%\begin{flushleft}
+%{\Large\color{black!80}\givencvjobtitle}
+%\end{flushleft}
+\vspace{5px}
 \renewcommand{\arraystretch}{1.6}
 \begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
 \ifthenelse{\equal{\givencvdate}{}}{}{\textsc{\Large\icon{\Info}} & \givencvdate\\}
@@ -201,9 +202,12 @@
 \ifthenelse{\equal{\givencvlinkedin}{}}{}{\textsc{\Large\icon{\Info}} & \href{\givencvlinkedin}{\textcolor{cerulean}\givencvlinkedin}\\}
 \end{tabular}
 
+\vspace{5px}
 
 \profilesection{About Me}{3.2cm}
 \givenaboutme
+
+\vspace{5px}
 
 
 \profilesection{Skills}{4.5cm}
@@ -270,30 +274,29 @@
 \pagestyle{empty}
 
 
+
 %%%%%%%%%%%%%%%%%%%%
 % List twenty environment %
 %%%%%%%%%%%%%%%%%%%%
-
 \setlength{\tabcolsep}{0pt}
 \newenvironment{twenty}{%
-  
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitem}[4]{%
-  \hspace{3pt}\scriptsize{#1}&\parbox[t]{11.5cm}{%
-    \small{#2}%
-    \vspace{5px}%
-    \hfill%
-    {\small#3}\\%
+  \small{\textit{#1}} \\
+  \parbox[t]{13.5cm}{% Width of the summary box
+    \small{#2}
+    \hfill
+    {\small#3}
     \small{#4}\vspace{\parsep}%
   }\\}
 
 \setlength{\tabcolsep}{0pt}
 \newenvironment{twentyicon}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l}
 }{%
   \end{tabular*}
 }
