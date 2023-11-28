@@ -286,7 +286,7 @@
 }
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitem}[4]{%
-  \small{\textit{#1}} \\
+  \small{\textbf{#1}} \\
   \parbox[t]{13.5cm}{% Width of the summary box
     \small{#2}
     \hfill
@@ -334,7 +334,7 @@
 \renewcommand{\bfseries}{\color{headercolor}}
 \newcommand{\twentyitemshorticon}[3]{%
   \hspace{3pt}\faicon{#1}\hspace{3pt}#2&
-      \parbox[t]{11.5cm}{%
+      \parbox[t]{10.5cm}{%
     \textbf{#3}%
   }\\}
 
