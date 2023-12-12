@@ -88,9 +88,7 @@
 \pgfmathsetlength{\imagewidth}{5cm}%
 \pgfmathsetlength{\imagescale}{\imagewidth/600}%
 
-
 \newcommand{\profilesection}[2]{{\noindent\color{black!80} \huge #1 \rule[0.15\baselineskip]{#2}{1pt} \vspace{1pt}}}
-
 
 \newcommand{\cvdate}[1]{\renewcommand{\givencvdate}{#1}}
 \newcommand{\cvlinkedin}[1]{\renewcommand{\givencvlinkedin}{#1}}
@@ -197,9 +195,9 @@
 \ifthenelse{\equal{\givencvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \givencvaddress\\}
 \ifthenelse{\equal{\givennumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \givennumberphone\\}
 \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\givencvmail}\\}
-\ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{\givencvsite}{\textcolor{cerulean}\givencvsite}\\}
-\ifthenelse{\equal{\givencvgithub}{}}{}{\textsc{\Large\icon{\Writinghand}} & \href{\givencvgithub}{\textcolor{cerulean}\givencvgithub}\\}
-\ifthenelse{\equal{\givencvlinkedin}{}}{}{\textsc{\Large\icon{\Info}} & \href{\givencvlinkedin}{\textcolor{cerulean}\givencvlinkedin}\\}
+\ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{https://\givencvsite}{\textcolor{cerulean}\givencvsite}\\}
+\ifthenelse{\equal{\givencvgithub}{}}{}{\textsc{\Large\icon{\Writinghand}} & \href{https://\givencvgithub}{\textcolor{cerulean}\givencvgithub}\\}
+\ifthenelse{\equal{\givencvlinkedin}{}}{}{\textsc{\Large\icon{\Info}} & \href{https://\givencvlinkedin}{\textcolor{cerulean}\givencvlinkedin}\\}
 \end{tabular}
 
 \vspace{5px}
@@ -245,6 +243,7 @@
 \renewcommand{\section}[1]{
   \par%\vspace{\parskip}
   {%
+    \hspace{3px}% spacing between left grey bar and Title (Experience/Education/Certification/Publications)
     \LARGE 
     \color{headercolor}%
     \@sectioncolor #1%
@@ -274,12 +273,12 @@
 \pagestyle{empty}
 
 
-
 %%%%%%%%%%%%%%%%%%%%
 % List twenty environment %
 %%%%%%%%%%%%%%%%%%%%
 \setlength{\tabcolsep}{0pt}
 \newenvironment{twenty}{%
+\hspace{5px} % left margin spacing between grey box and white box
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
 }{%
   \end{tabular*}
