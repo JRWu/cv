@@ -1,7 +1,7 @@
 # Makefile Jiarong Wu cv
 
 files_tex = $(wildcard *.tex)
-cv_name = "JiaRongWu_CV_2023"
+cv_name = "JiaRongWu_CV_2024"
 all: pdf
 	@echo "Done!"
 pdf: *.tex

@@ -19,7 +19,6 @@
 \RequirePackage{parskip}
 \RequirePackage{enumitem}
 
-
 \newbool{icon}
 \DeclareOption{icon}{%
  \booltrue{icon}
@@ -101,6 +100,7 @@
 \newcommand{\profilepic}[1]{\renewcommand{\givenprofilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\givencvname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\givencvjobtitle}{#1}}
+\newcommand{\cvgooglescholar}[1]{\renewcommand{\givencvgooglescholar}{#1}}
 
 \newcommand{\givencvname}{REQUIRED!}
 \newcommand{\givencvdate}{}
@@ -113,6 +113,7 @@
 \newcommand{\givencvsite}{}
 \newcommand{\givencvgithub}{}
 \newcommand{\givencvjobtitle}{}
+\newcommand{\givencvgooglescholar}{}
 
 
 
@@ -188,6 +189,7 @@
 %\begin{flushleft}
 %{\Large\color{black!80}\givencvjobtitle}
 %\end{flushleft}
+
 \vspace{5px}
 \renewcommand{\arraystretch}{1.6}
 \begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
@@ -197,7 +199,9 @@
 \ifthenelse{\equal{\givencvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\givencvmail}{\givencvmail}\\}
 \ifthenelse{\equal{\givencvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \href{https://\givencvsite}{\textcolor{cerulean}\givencvsite}\\}
 \ifthenelse{\equal{\givencvgithub}{}}{}{\textsc{\Large\icon{\Writinghand}} & \href{https://\givencvgithub}{\textcolor{cerulean}\givencvgithub}\\}
-\ifthenelse{\equal{\givencvlinkedin}{}}{}{\textsc{\Large\icon{\Info}} & \href{https://\givencvlinkedin}{\textcolor{cerulean}\givencvlinkedin}\\}
+\ifthenelse{\equal{\givencvlinkedin}{}}{}{\textsc{\Large\icon{in}} & \href{https://\givencvlinkedin}{\textcolor{cerulean}\givencvlinkedin}\\}
+\ifthenelse{\equal{\givencvgooglescholar}{}}{}{\textsc{\Large\icon{G}} & \href{https://scholar.google.ca/citations?user=dqj1T1EAAAAJ}{\textcolor{cerulean}\givencvgooglescholar}\\}
+
 \end{tabular}
 
 \vspace{5px}
